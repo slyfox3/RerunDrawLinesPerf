@@ -21,6 +21,7 @@ def rotate(theta: float):
 
 def draw_lines(lines_count: int, pts_per_line: int):
     theta_delta = 360 / lines_count
+    zig_zag = one_strip(pts_per_line)
     for i in range(lines_count):
         rr.log(
             f"line_{i}",
@@ -29,7 +30,7 @@ def draw_lines(lines_count: int, pts_per_line: int):
         )
         rr.log(
             f"line_{i}/strip",
-            one_strip(pts_per_line),
+            zig_zag,
             static=True,
         )
 
